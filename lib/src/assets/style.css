@@ -3,9 +3,98 @@
 }
 
 html {
+    background: linear-gradient(180deg, #0a0a0a 20%, 82%, #1e77e6 88%, #07438e 100%) no-repeat;
+    background-color: #0a0a0a;
     box-sizing: border-box;
 }
 
 body {
-    
+    color: #ffffff;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Mr Dafoe', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    left: 0;
+    margin-left: 7rem;
+    margin-top: 4.5rem;
+    position: absolute;
+    text-shadow: 0 0 0.25rem #ffffff, 0 0 1rem #ff57e3, 0 0 1rem #ff00e0;
+    top: 0;
+    transform: skewY(-8deg);
+}
+
+h2 {
+    background: linear-gradient(180deg, dodgerblue 0%, 42%, #ffffff 48%, #0a0a0a 50%, 54%, #ff57e3 62%, 68%, #ffffff 72%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Fugaz One', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.05rem #ffffff;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+#grid {
+    bottom: 0;
+    height: 30vh;
+    perspective: 1rem;
+    pointer-events: none;
+    position: fixed;
+    transform: scale(2.0);
+    width: 100vw;
+}
+
+#grid::after {
+    background: linear-gradient(90deg, transparent 50%, 98%, white 50%);
+    background-repeat: repeat-x;
+    background-size: 4rem 100%;
+    content: "";
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    transform: rotateX(4deg);
+    width: 100%;
+    z-index: 1;
+}
+
+
+#grid::before {
+    background: linear-gradient(transparent 50%, 98%, white 50%);
+    background-repeat: repeat-y;
+    background-size: 100% 2rem;
+    content: "";
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    transform: rotateX(4deg);
+    width: 100%;
+    z-index: 1;
+}
+
+#grid > div {
+    bottom: 0;
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    transform: rotateX(4deg);
+    width: 100%;
 }
